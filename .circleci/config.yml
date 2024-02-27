@@ -7,4 +7,17 @@ jobs:
     
     steps:
       - checkout
-      - run: python main.py
+      - run:
+          name: Install dependencies
+          command: |
+            pip install -r requirements.txt
+      - run:
+          name: Run tests
+          command: |
+            python manage.py test
+
+workflows:
+  version: 2
+  build_and_test:
+    jobs:
+      - build
