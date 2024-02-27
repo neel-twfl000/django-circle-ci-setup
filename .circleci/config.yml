@@ -1,0 +1,10 @@
+version: 2.1
+
+jobs:
+  build:
+    docker:
+      - image: cimg/python:3.11  # Use an appropriate Python version
+    
+    steps:
+      - checkout
+      - run: python main.py
