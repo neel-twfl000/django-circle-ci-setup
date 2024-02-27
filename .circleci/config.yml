@@ -15,7 +15,7 @@ jobs:
           name: Run tests
           command: |
             python manage.py test
-            python manage.py runserver
+            # python manage.py runserver
 
 workflows:
   version: 2
